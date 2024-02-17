@@ -11,17 +11,101 @@
 </head>
 
 <body>
-<header>
+    <header class="my-10 mx-32 h-screen">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li>
+                            <a>Destinations</a>
+                            <ul class="p-2">
+                                <li><a>Dhaka</a></li>
+                                <li><a>Khulna</a></li>
+                                <li><a>Sylhet</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-2xl font-bold">B-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="text-lg menu menu-horizontal space-x-12">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li>
+                        <details>
+                            <summary>Destinations</summary>
+                            <ul class="p-2">
+                                <li><a>Dhaka</a></li>
+                                <li><a>Khulna</a></li>
+                                <li><a>Sylhet</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a>Search</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn">Bus <img src="./images/bus-icon.png" alt=""></a>
+            </div>
+        </div>
+        <div class="bg-[url('./images/banner.png')] bg-no-repeat h-screen text-center m-10">
+            <h1 class="text-6xl text-white font-extrabold pt-20">End-to-End Travel with <br>
+                <span class="text-[#1dd100] ">Boss Paribahan</span>
+            </h1>
+            <p class="text-lg text-white pt-10">Yes, you can run unit tests and view the results directly within the
+                app. <br>The integrated testing
+                features allow for a streamlined.</p>
+            <button class="btn bg-[#1dd100] mt-10">Buy Ticket</button>
+        </div>
+    </header>
 
-</header>
+    <main class="mx-32 mb-10">
+        <section class="space-y-10 text-center">
+            <h2 class="text-4xl text-center font-bold">Best offers for you</h2>
+            <div class="flex justify-center gap-6 mb-16">
+                <div class="flex items-center bg-[#FFBF0F] p-12 rounded-2xl">
+                    <div class="pr-10">
+                        <h3 class="text-xl font-bold">15% OFF</h3>
+                        <h5 class="font-semibold">on your next purchase</h5>
+                        <p>use by january 2025</p>
+                    </div>
+                    <div class="border-l-2 border-white border-dashed h-20 pl-10">
+                        <h3 class="text-xl font-bold pt-5">NEW15</h3>
+                        <p>coupon code</p>
+                    </div>
+                </div>
+                <div class="flex items-center bg-[#F78C9C] p-12 rounded-2xl">
+                    <div class="pr-10">
+                        <h3 class="text-xl font-bold">20% OFF</h3>
+                        <h5 class="font-semibold">on your next purchase</h5>
+                        <p>use by january 2025</p>
+                    </div>
+                    <div class="border-l-2 border-white border-dashed h-20 pl-10">
+                        <h3 class="text-xl font-bold pt-5">NEW15</h3>
+                        <p>coupon code</p>
+                    </div>
+                </div>
+           
+            </div>
+            <button class="btn text-[#1DD100] border border-[#1DD100]">See All Offers</button>
+        </section>
+    </main>
 
-<main>
+    <footer>
 
-</main>
-
-<footer>
-
-</footer>
+    </footer>
 </body>
 
 </html>

@@ -67,7 +67,7 @@
             <p class="text-lg text-white pt-10">Yes, you can run unit tests and view the results directly within the
                 app. <br>The integrated testing
                 features allow for a streamlined.</p>
-            <button class="btn bg-[#1dd100] mt-10">Buy Ticket</button>
+            <button class="btn btn-bg mt-10">Buy Ticket</button>
         </div>
     </header>
 
@@ -103,38 +103,172 @@
         </section>
         <section class="bg-[#F7F8F8] px-32 py-24 space-y-7 rounded-3xl">
             <h2 class="font-bold text-4xl text-center">B Paribahan</h2>
-            <p class="font-normal text-lg text-[#03071299] text-center">Yes, you can run unit tests and view the results directly
+            <p class="font-normal text-lg text-color text-center">Yes, you can run unit tests and view the results
+                directly
                 within the app. The integrated testing features allow for a streamlined.</p>
-            <div class="bg-white grid grid-cols-4 p-8">
+            <div class="bg-white grid grid-cols-4 py-8 px-3 rounded-3xl">
                 <div class="pr-16 col-span-3">
-                    <div class="flex gap-20 justify-around">
-                        <div class="flex justify-around">
+                    <div class="flex gap-20 justify-between">
+                        <div class="flex gap-3 justify-between px-10">
                             <img src="./images/bus-logo.png" alt="">
                             <div>
-                                <h3 class="text-3xl font-bold">Greenline Paribahan
+                                <h3 class="text-3xl font-bold pb-2">Greenline Paribahan
                                 </h3>
-                                <p class="text-sm font-semibold text-[#03071299] m-0">Coach-009-WEB ! AC_Business</p>
+                                <p class="text-sm font-semibold text-color m-0">Coach-009-WEB ! AC_Business</p>
                             </div>
                         </div>
                         <button class="btn text-[#1DD100]"><img src="./images/seat-green.png" alt="">40<span>seat
                                 left</span></button>
                     </div>
-                    <div class="bg-[#F7F8F8]">
-                        <div class="flex justify-around">
-                            <p>Route</p>
-                            <h3>Dhaka-Sylhet</h3>
+                    <div class="bg-[#F7F8F8] mx-16 rounded-2xl">
+                        <div class="flex justify-between my-6 mx-10 border-b-2 border-common-color border-dashed py-6">
+                            <p class="font-semibold text-lg text-color">Route</p>
+                            <h3 class="font-semibold text-lg">Dhaka-Sylhet</h3>
                         </div>
-                        <div></div>
-                        <div></div>
+                        <div
+                            class="flex justify-between my-6 mx-10 border-b-2 border-common-color bordeer border-dashed pb-6">
+                            <p class="font-semibold text-lg text-color">Departure Time</p>
+                            <h3 class="font-semibold text-lg">9:00</h3>
+                        </div>
+                        <div class="flex justify-between my-6 mx-10 pb-6">
+                            <button class="bg-[#0307120D] text-base font-medium btn">Boarding Point - Laxmipur</button>
+                            <button class="bg-[#0307120D] text-base font-medium btn">Dropping Point - Bogura</button>
+                            <button class="bg-[#0307120D] text-base font-medium btn">Est. Time - 11 Hour</button>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-col text-center border-l-2 border-[#1DD100] border-dashed pl-16">
-                    <img src="./images/fare.png" alt="">
+                <div
+                    class="flex flex-col items-center text-center border-l-2 border-[#1DD100] border-dashed pl-16 pt-24">
+                    <img class="w-20" src="./images/fare.png" alt="">
                     <h3 class="text-2xl font-bold"><span>550</span> Taka</h3>
-                    <p class="font-semibold text-xl text-[#03071299]">Per Seat</p>
+                    <p class="font-semibold text-xl text-color">Per Seat</p>
                 </div>
             </div>
-            <div></div>
+            <div class="flex justify-center gap-20 py-7 bg-white rounded-3xl p-8">
+                <div class="">
+                    <h3 class="text-xl font-semibold">Select Your Ticket</h3>
+                    <div class="flex justify-between border-y-2 border-common-color border-dashed py-4 my-5">
+                        <div class="flex items-center">
+                            <img src="./images/seat-green.png" alt="">
+                            <span class="text-color font-medium text-lg">Available</span>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="./images/seat-green-filled.png" alt="">
+                            <span class="text-lg font-medium text-[#1DD100]">Selected</span>
+                        </div>
+                    </div>
+                    <div class="seat-container flex gap-4">
+                        <div class="flex flex-col gap-y-5 my-4">
+                            <div class="px-4 py-8">A</div>
+                            <div class="px-4">B</div>
+                            <div class="px-4 py-8">C</div>
+                            <div class="px-4">D</div>
+                            <div class="px-4 py-8">E</div>
+                            <div class="px-4">F</div>
+                            <div class="px-4 py-8">G</div>
+                            <div class="px-4">H</div>
+                            <div class="px-4 py-8">I</div>
+                            <div class="px-4">J</div>
+                        </div>
+                        <div class="grid grid-cols-4 gap-y-5 gap-x-8 mt-8">
+                            <div id="A1" class="seat-number">A1</div>
+                            <div id="A2" class="seat-number">A2</div>
+                            <div id="A3" class="seat-number">A3</div>
+                            <div id="A4" class="seat-number">A4</div>
+                            <div id="B1" class="seat-number">B1</div>
+                            <div id="B2" class="seat-number">B2</div>
+                            <div id="B3" class="seat-number">B3</div>
+                            <div id="B4" class="seat-number">B4</div>
+                            <div id="C1" class="seat-number">C1</div>
+                            <div id="C2" class="seat-number">C2</div>
+                            <div id="C3" class="seat-number">C3</div>
+                            <div id="C4" class="seat-number">C4</div>
+                            <div id="D1" class="seat-number">D1</div>
+                            <div id="D2" class="seat-number">D2</div>
+                            <div id="D3" class="seat-number">D3</div>
+                            <div id="D4" class="seat-number">D4</div>
+                            <div id="E1" class="seat-number">E1</div>
+                            <div id="E2" class="seat-number">E2</div>
+                            <div id="E3" class="seat-number">E3</div>
+                            <div id="E4" class="seat-number">E4</div>
+                            <div id="F1" class="seat-number">F1</div>
+                            <div id="F2" class="seat-number">F2</div>
+                            <div id="F3" class="seat-number">F3</div>
+                            <div id="F4" class="seat-number">F4</div>
+                            <div id="G1" class="seat-number">G1</div>
+                            <div id="G2" class="seat-number">G2</div>
+                            <div id="G3" class="seat-number">G3</div>
+                            <div id="G4" class="seat-number">G4</div>
+                            <div id="H1" class="seat-number">H1</div>
+                            <div id="H2" class="seat-number">H2</div>
+                            <div id="H3" class="seat-number">H3</div>
+                            <div id="H4" class="seat-number">H4</div>
+                            <div id="I1" class="seat-number">I1</div>
+                            <div id="I2" class="seat-number">I2</div>
+                            <div id="I3" class="seat-number">I3</div>
+                            <div id="I4" class="seat-number">I4</div>
+                            <div id="J1" class="seat-number">J1</div>
+                            <div id="J2" class="seat-number">J2</div>
+                            <div id="J3" class="seat-number">J3</div>
+                            <div id="J4" class="seat-number">J4</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/2">
+                    <div>
+                        <h3 class="text-xl font-semibold border-b-2 border-common-color border-dashed py-4">Select Your
+                            Ticket</h3>
+                        <div class="bg-[#F7F8F8] p-8 rounded-xl my-6">
+                            <table class="">
+                                <tr class="flex gap-24 border-b-2 border-common-color border-dashed">
+                                    <th>Seat</th>
+                                    <th>Class</th>
+                                    <th>Price</th>
+                                </tr>
+                                <tr class="flex gap-24">
+                                    <td>A2</td>
+                                    <td>Economy</td>
+                                    <td>550</td>
+                                </tr>
+                                <tr class="flex gap-24">
+                                    <td>C2</td>
+                                    <td>Economy</td>
+                                    <td>550</td>
+                                </tr>
+                                <tr class="flex gap-48 border-t-2 border-common-color py-2">
+                                    <th>Total price</th>
+                                    <th><span>1100 </span>TK.</th>
+                                </tr>
+                            </table>
+                            <input class="w-96 px-6 py-4 rounded-xl border-none outline-none relative" type="text"
+                                placeholder="Have any coupon?">
+                            <button class="btn btn-bg text-white text-base absolute right-80 mt-1">Apply</button>
+                          <table>
+                            <tr class="flex gap-48 py-2">
+                                <th>Grand Total</th>
+                                <th><span>1100 </span>TK.</th>
+                            </tr>
+                        </table>
+                        </div>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="text-xl font-bold pb-4" for="name">Passenger Name*</label><br>
+                                <input class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="text" placeholder="Enter Your Name">
+                              </div>
+                              <div>
+                                <label class="text-xl font-bold " for="Number">Phone Number*</label><br>
+                                <input class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="text"
+                                  placeholder="Enter Your Phone Number">
+                              </div>
+                              <div><label class="text-xl font-bold pb-4" for="Email">Email ID</label><br>
+                                <input class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="email"
+                                  placeholder="Enter Your Email"><br>
+                              </div>
+                              <button class="btn text-white text-xl btn-bg font-extrabold w-96">Next</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 

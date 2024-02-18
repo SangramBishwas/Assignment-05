@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 body {
-    font-family: "Inter", sans-serif;
-  }
+  font-family: "Inter", sans-serif;
+}
+
+/* Common Style */
+.text-color {
+  color: #03071280;
+}
+
+.common-color {
+  color: #03071233;
+}
+
+.btn-bg {
+  background-color: #1DD100;
+}
+
+/*----------------------------*/
+.seat-number {
+  background-color: #F7F8F8;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+}
+tr{
+  margin: 12px 0;
+}

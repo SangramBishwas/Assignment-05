@@ -67,7 +67,7 @@
             <p class="text-lg text-white pt-10">Yes, you can run unit tests and view the results directly within the
                 app. <br>The integrated testing
                 features allow for a streamlined.</p>
-            <button class="btn btn-bg mt-10">Buy Ticket</button>
+            <button id="move-btn" class="btn btn-bg mt-10">Buy Ticket</button>
         </div>
     </header>
 
@@ -93,7 +93,7 @@
                         <p>use by january 2025</p>
                     </div>
                     <div class="border-l-2 border-white border-dashed h-20 pl-10">
-                        <h3 class="text-xl font-bold pt-5">NEW15</h3>
+                        <h3 class="text-xl font-bold pt-5">Couple20</h3>
                         <p>coupon code</p>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
             </div>
             <button class="btn text-[#1DD100] border border-[#1DD100]">See All Offers</button>
         </section>
-        <section class="bg-[#F7F8F8] px-32 py-24 space-y-7 rounded-3xl">
+        <section id="where-to-move" class="bg-[#F7F8F8] px-32 py-24 space-y-7 rounded-3xl">
             <h2 class="font-bold text-4xl text-center">B Paribahan</h2>
             <p class="font-normal text-lg text-color text-center">Yes, you can run unit tests and view the results
                 directly
@@ -117,8 +117,8 @@
                                 <p class="text-sm font-semibold text-color m-0">Coach-009-WEB ! AC_Business</p>
                             </div>
                         </div>
-                        <button class="btn text-[#1DD100]"><img src="./images/seat-green.png" alt="">40<span>seat
-                                left</span></button>
+                        <button class="btn text-[#1DD100]"><img src="./images/seat-green.png" alt=""><span id="seat-count">40</span>seat
+                                left</button>
                     </div>
                     <div class="bg-[#F7F8F8] mx-16 rounded-2xl">
                         <div class="flex justify-between my-6 mx-10 border-b-2 border-common-color border-dashed py-6">
@@ -219,26 +219,18 @@
                         <h3 class="text-xl font-semibold border-b-2 border-common-color border-dashed py-4">Select Your
                             Ticket</h3>
                         <div class="bg-[#F7F8F8] p-8 rounded-xl my-6">
-                            <table class="">
+                            <table id="selected-ticket" class="">
                                 <tr class="flex gap-24 border-b-2 border-common-color border-dashed">
-                                    <th>Seat</th>
+                                    <th>Seat<sup id="seat-selected" class="bg-lime-600 text-white p-1 rounded-xl">0</sup></th>
                                     <th>Class</th>
                                     <th>Price</th>
                                 </tr>
-                                <tr class="flex gap-24">
-                                    <td>A2</td>
-                                    <td>Economy</td>
-                                    <td>550</td>
-                                </tr>
-                                <tr class="flex gap-24">
-                                    <td>C2</td>
-                                    <td>Economy</td>
-                                    <td>550</td>
-                                </tr>
-                                <tr class="flex gap-48 border-t-2 border-common-color py-2">
-                                    <th>Total price</th>
-                                    <th><span>1100 </span>TK.</th>
-                                </tr>
+                            </table>
+                            <table>
+                                    <tr class="flex gap-48 border-t-2 border-common-color py-2">
+                                        <th>Total price</th>
+                                        <th>BDT <span id="total-price">00 </span></th>
+                                    </tr>
                             </table>
                             <input class="w-96 px-6 py-4 rounded-xl border-none outline-none relative" type="text"
                                 placeholder="Have any coupon?">
@@ -246,7 +238,7 @@
                           <table>
                             <tr class="flex gap-48 py-2">
                                 <th>Grand Total</th>
-                                <th><span>1100 </span>TK.</th>
+                                <th><span id="grand-total">00 </span>TK.</th>
                             </tr>
                         </table>
                         </div>
@@ -275,6 +267,8 @@
     <footer>
 
     </footer>
+    <script src="./scripts/media.js"></script>
+    <script src="./scripts/test.js"></script>
 </body>
 
 </html>

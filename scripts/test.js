@@ -61,25 +61,18 @@ for (const seat of seatNumbers) {
         })
         const headerContainer = document.getElementById('header-container');
         const mainContainer = document.getElementById('main-container');
+        const footerContainer = document.getElementById('footer-container');
         const successContainer = document.getElementById('success-container');
         nextButton.addEventListener('click', function () {
             headerContainer.classList.add('hidden');
             mainContainer.classList.add('hidden');
+            footerContainer.classList.add('hidden');
             successContainer.classList.remove('hidden');
         })
 
     })
 }
-//--------------cupon code--------------------
-// const applyBtn = document.getElementById('apply-btn');
-// const inputCupon = document.getElementById('input-cupon');
-// applyBtn.addEventListener('click', function () {
-//     const cuponCode = inputCupon.value;
-//     const cuponContainer = document.getElementById('cupon-container')
-//     if (cuponCode === 'NEW15') {
-//         cuponContainer.classList.add('hidden');
-//     }
-// })
+
 //---------Set Number Value---------------
 function setNumberById(elementId, value) {
     const element = document.getElementById(elementId);
@@ -107,19 +100,3 @@ function discountPrice() {
         alert('Invaild Cupon Code');
     }
 }
-// //---------------Next Button-----------
-// const nextButton = document.getElementById('next-btn');
-// const inputNumber = document.getElementById('input-number');
-// inputNumber.addEventListener('input', function() {
-// if(inputNumber.value !== ''){
-//     nextButton.disabled = false;
-// }
-// })
-// const headerContainer = document.getElementById('header-container');
-// const mainContainer = document.getElementById('main-container');
-// const successContainer = document.getElementById('success-container');
-// nextButton.addEventListener('click', function(){
-//     headerContainer.classList.add('hidden');
-//     mainContainer.classList.add('hidden');
-//     successContainer.classList.remove('hidden');
-// })

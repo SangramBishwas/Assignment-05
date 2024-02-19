@@ -58,18 +58,19 @@ for (const seat of seatNumbers) {
 //         cuponContainer.classList.add('hidden');
 //     }
 // })
-
+//---------Set Number Value---------------
 function setNumberById(elementId, value) {
     const element = document.getElementById(elementId);
     element.innerHTML = value;
 }
-
+//-------------for sum of ticket-------------
 function sumOfTicketPrice(elementId, value) {
     const priceText = document.getElementById(elementId).innerHTML;
     const priceNum = parseInt(priceText);
     const total = priceNum + value;
     setNumberById(elementId, total);
 }
+//-----------------for cupon------------------
 function discountPrice() {
     const priceText = document.getElementById('total-price').innerHTML;
     let GrandTotalPrice = parseInt(priceText);
@@ -84,3 +85,11 @@ function discountPrice() {
         alert('Invaild Cupon Code');
     }
 }
+//---------------Next Button-----------
+const nextButton = document.getElementById('next-btn');
+const inputNumber = document.getElementById('input-number');
+inputNumber.addEventListener('input', function() {
+if(inputNumber.value !== ''){
+    nextButton.disabled = false;
+}
+})

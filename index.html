@@ -257,16 +257,16 @@
                                 <input class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="text"
                                     placeholder="Enter Your Name">
                             </div>
-                            <div>
-                                <label class="text-xl font-bold " for="Number">Phone Number*</label><br>
-                                <input class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="text"
-                                    placeholder="Enter Your Phone Number">
-                            </div>
                             <div><label class="text-xl font-bold pb-4" for="Email">Email ID</label><br>
                                 <input class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="email"
                                     placeholder="Enter Your Email"><br>
                             </div>
-                            <button class="btn text-white text-xl btn-bg font-extrabold w-96">Next</button>
+                            <div>
+                                <label class="text-xl font-bold" for="Number">Phone Number*</label><br>
+                                <input id="input-number" class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="number"
+                                    placeholder="Enter Your Phone Number">
+                            </div>
+                            <button id="next-btn" class="btn text-white text-xl btn-bg font-extrabold w-96" disabled>Next</button>
                         </form>
                     </div>
                 </div>
@@ -280,5 +280,4 @@
     <script src="./scripts/media.js"></script>
     <script src="./scripts/test.js"></script>
 </body>
-
 </html>

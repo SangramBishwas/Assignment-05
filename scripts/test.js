@@ -9,7 +9,7 @@ let seatSelect = 0;
 const price = 550;
 for (const seat of seatNumbers) {
     seat.addEventListener('click', function (event) {
-        //-------------Color------------------
+        //-------------------Color--------------------
         seat.classList.add('bg-lime-500');
         seat.classList.add('text-white');
         //-------------increament/decreament-----------
@@ -30,12 +30,25 @@ for (const seat of seatNumbers) {
         tr.appendChild(td2);
         tr.appendChild(td3);
         selectedTicket.appendChild(tr);
+        //------------------Show Cupon Field----------------------- 
+        const cuponField = document.getElementById('cupon-container');
+        cuponField.classList.remove('hidden');
         //------------------Total/Grand total Price------------------
         sumOfTicketPrice('total-price', price);
         sumOfTicketPrice('grand-total', price);
 
     })
 }
+//--------------cupon code--------------------
+// const applyBtn = document.getElementById('apply-btn');
+// const inputCupon = document.getElementById('input-cupon');
+// applyBtn.addEventListener('click', function () {
+//     const cuponCode = inputCupon.value;
+//     const cuponContainer = document.getElementById('cupon-container')
+//     if (cuponCode === 'NEW15') {
+//         cuponContainer.classList.add('hidden');
+//     }
+// })
 
 function setNumberById(elementId, value) {
     const element = document.getElementById(elementId);
@@ -47,4 +60,16 @@ function sumOfTicketPrice(elementId, value) {
     const priceNum = parseInt(priceText);
     const total = priceNum + value;
     setNumberById(elementId, total);
+}
+function discountPrice() {
+    const priceText = document.getElementById('total-price').innerHTML;
+    let GrandTotalPrice = parseInt(priceText);
+    setNumberById('grand-total', GrandTotalPrice);
+    if (document.getElementById('input-cupon').value === 'NEW15') {
+        setNumberById('grand-total', GrandTotalPrice -= GrandTotalPrice * (15 / 100));
+        document.getElementById('cupon-container').classList.add('hidden');
+    } else if (document.getElementById('input-cupon').value === 'Couple 20') {
+        setNumberById('grand-total', GrandTotalPrice -= GrandTotalPrice * (20 / 100));
+        document.getElementById('cupon-container').classList.add('hidden');
+    }
 }

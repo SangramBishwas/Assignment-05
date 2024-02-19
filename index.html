@@ -93,7 +93,7 @@
                         <p>use by january 2025</p>
                     </div>
                     <div class="border-l-2 border-white border-dashed h-20 pl-10">
-                        <h3 class="text-xl font-bold pt-5">Couple20</h3>
+                        <h3 class="text-xl font-bold pt-5">Couple 20</h3>
                         <p>coupon code</p>
                     </div>
                 </div>
@@ -117,8 +117,9 @@
                                 <p class="text-sm font-semibold text-color m-0">Coach-009-WEB ! AC_Business</p>
                             </div>
                         </div>
-                        <button class="btn text-[#1DD100]"><img src="./images/seat-green.png" alt=""><span id="seat-count">40</span>seat
-                                left</button>
+                        <button class="btn text-[#1DD100]"><img src="./images/seat-green.png" alt=""><span
+                                id="seat-count">40</span>seat
+                            left</button>
                     </div>
                     <div class="bg-[#F7F8F8] mx-16 rounded-2xl">
                         <div class="flex justify-between my-6 mx-10 border-b-2 border-common-color border-dashed py-6">
@@ -221,42 +222,46 @@
                         <div class="bg-[#F7F8F8] p-8 rounded-xl my-6">
                             <table id="selected-ticket" class="">
                                 <tr class="flex gap-24 border-b-2 border-common-color border-dashed">
-                                    <th>Seat<sup id="seat-selected" class="bg-lime-600 text-white p-1 rounded-xl">0</sup></th>
+                                    <th>Seat<sup id="seat-selected"
+                                            class="bg-lime-600 text-white p-1 rounded-xl">0</sup></th>
                                     <th>Class</th>
                                     <th>Price</th>
                                 </tr>
                             </table>
                             <table>
-                                    <tr class="flex gap-48 border-t-2 border-common-color py-2">
-                                        <th>Total price</th>
-                                        <th>BDT <span id="total-price">00 </span></th>
-                                    </tr>
+                                <tr class="flex gap-48 border-t-2 border-common-color py-2">
+                                    <th>Total price</th>
+                                    <th>BDT <span id="total-price">00 </span></th>
+                                </tr>
                             </table>
-                            <input class="w-96 px-6 py-4 rounded-xl border-none outline-none relative" type="text"
-                                placeholder="Have any coupon?">
-                            <button class="btn btn-bg text-white text-base absolute right-80 mt-1">Apply</button>
-                          <table>
-                            <tr class="flex gap-48 py-2">
-                                <th>Grand Total</th>
-                                <th><span id="grand-total">00 </span>TK.</th>
-                            </tr>
-                        </table>
+                            <div id="cupon-container" class="hidden">
+                                <input id="input-cupon" class="w-96 px-6 py-4 rounded-xl border-none outline-none relative" type="text"
+                                    placeholder="Have any coupon?">
+                                <button onclick="discountPrice()" class="btn btn-bg text-white text-base absolute right-80 mt-1">Apply</button>
+                            </div>
+                            <table>
+                                <tr class="flex gap-48 py-2">
+                                    <th>Grand Total</th>
+                                    <th><span id="grand-total">00 </span>TK.</th>
+                                </tr>
+                            </table>
                         </div>
                         <form class="space-y-6">
                             <div>
                                 <label class="text-xl font-bold pb-4" for="name">Passenger Name*</label><br>
-                                <input class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="text" placeholder="Enter Your Name">
-                              </div>
-                              <div>
+                                <input class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="text"
+                                    placeholder="Enter Your Name">
+                            </div>
+                            <div>
                                 <label class="text-xl font-bold " for="Number">Phone Number*</label><br>
                                 <input class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="text"
-                                  placeholder="Enter Your Phone Number">
-                              </div>
-                              <div><label class="text-xl font-bold pb-4" for="Email">Email ID</label><br>
+                                    placeholder="Enter Your Phone Number">
+                            </div>
+                            <div><label class="text-xl font-bold pb-4" for="Email">Email ID</label><br>
                                 <input class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="email"
-                                  placeholder="Enter Your Email"><br>
-                              </div>
-                              <button class="btn text-white text-xl btn-bg font-extrabold w-96">Next</button>
+                                    placeholder="Enter Your Email"><br>
+                            </div>
+                            <button class="btn text-white text-xl btn-bg font-extrabold w-96">Next</button>
                         </form>
                     </div>
                 </div>

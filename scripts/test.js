@@ -9,6 +9,7 @@ let seatSelect = 0;
 const price = 550;
 for (const seat of seatNumbers) {
     seat.addEventListener('click', function (event) {
+        seat.setAttribute('disabled', true);
         //-------------------Color--------------------
         seat.classList.add('bg-lime-500');
         seat.classList.add('text-white');
@@ -29,7 +30,15 @@ for (const seat of seatNumbers) {
         tr.appendChild(td);
         tr.appendChild(td2);
         tr.appendChild(td3);
-        selectedTicket.appendChild(tr);
+        selectedTicket.appendChild(tr, false);
+        //-------------------Can't selec more than 4---------------
+        if (seatSelect > 4) {
+            const alertNotice = document.getElementById('alert-notice');
+            alertNotice.classList.remove('hidden');
+            const tableHidden = document.getElementById('table-container');  
+            tableHidden.classList.add('hidden');
+        }
+
         //------------------Show Cupon Field----------------------- 
         const cuponField = document.getElementById('cupon-container');
         cuponField.classList.remove('hidden');
@@ -71,5 +80,7 @@ function discountPrice() {
     } else if (document.getElementById('input-cupon').value === 'Couple 20') {
         setNumberById('grand-total', GrandTotalPrice -= GrandTotalPrice * (20 / 100));
         document.getElementById('cupon-container').classList.add('hidden');
+    } else {
+        alert('Invaild Cupon Code');
     }
 }

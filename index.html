@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="my-10 mx-32 h-screen">
+    <header id="header-container" class="my-10 mx-32 h-screen">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -71,7 +71,7 @@
         </div>
     </header>
 
-    <main class="mb-16">
+    <main id="main-container" class="mb-16">
         <section class="space-y-10 text-center my-16 mx-32">
             <h2 class="text-4xl text-center font-bold">Best offers for you</h2>
             <div class="flex justify-center gap-6 mb-16">
@@ -235,9 +235,11 @@
                                 </tr>
                             </table>
                             <div id="cupon-container" class="hidden">
-                                <input id="input-cupon" class="w-96 px-6 py-4 rounded-xl border-none outline-none relative" type="text"
+                                <input id="input-cupon"
+                                    class="w-96 px-6 py-4 rounded-xl border-none outline-none relative" type="text"
                                     placeholder="Have any coupon?">
-                                <button onclick="discountPrice()" class="btn btn-bg text-white text-base absolute right-80 mt-1">Apply</button>
+                                <button onclick="discountPrice()"
+                                    class="btn btn-bg text-white text-base absolute right-80 mt-1">Apply</button>
                             </div>
                             <table>
                                 <tr class="flex gap-48 py-2">
@@ -248,7 +250,8 @@
                         </div>
                         <div id="alert-notice" class="space-y-3 bg-[#F7F8F8] p-8 rounded-xl my-6 hidden">
                             <span class="bg-red-900 text-white text-2xl font-extrabold py-2 px-4 rounded">Alert: </span>
-                            <h3 class="font-bold text-2xl">Don't click more than four seat. Please reload and try again</h3>
+                            <h3 class="font-bold text-2xl">Don't click more than four seat. Please reload and try again
+                            </h3>
                             <button onClick="window.location.reload();" class="btn font-medium text-xl">Reload</button>
                         </div>
                         <form class="space-y-6">
@@ -263,21 +266,35 @@
                             </div>
                             <div>
                                 <label class="text-xl font-bold" for="Number">Phone Number*</label><br>
-                                <input id="input-number" class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl" type="number"
-                                    placeholder="Enter Your Phone Number">
+                                <input id="input-number" class="bg-[#13131807] w-96 h-16 p-5 mt-4 rounded-xl"
+                                    type="number" placeholder="Enter Your Phone Number">
                             </div>
-                            <button id="next-btn" class="btn text-white text-xl btn-bg font-extrabold w-96" disabled>Next</button>
+                            <button id="next-btn" class="btn text-white text-xl btn-bg font-extrabold w-96"
+                                disabled>Next</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer>
-
-    </footer>
+    <div id="success-container" class="flex flex-col justify-center items-center bg-[#F2F1F1] min-h-screen hidden">
+        <div class="card w-1/3 bg-base-100 shadow-xl space-y-3">
+            <figure class="px-10 pt-10">
+                <img src="./images/success.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title text-[#27AE60] py-4">Success</h2>
+                <h4 class="text-lg font-medium">Thank you for Booking Our Bus Seats.We are working hard to find the best service and deals for you</h4>
+                <p class="text-[#27AE60]">
+                    Shortly you will find a confirmation in your email.</p>
+                <div class="card-actions">
+                    <button class="btn text-white font-semibold bg-[#27AE60] px-20 my-5 rounded-3xl">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./scripts/media.js"></script>
     <script src="./scripts/test.js"></script>
 </body>
+
 </html>

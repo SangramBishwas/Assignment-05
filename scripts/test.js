@@ -9,15 +9,18 @@ let seatSelect = 0;
 const price = 550;
 for (const seat of seatNumbers) {
     seat.addEventListener('click', function (event) {
+        
         seat.setAttribute('disabled', true);
         //-------------------Color--------------------
         seat.classList.add('bg-lime-500');
         seat.classList.add('text-white');
+
         //-------------increament/decreament-----------
         seatCount -= 1;
         seatSelect += 1;
         setNumberById('seat-count', seatCount);
         setNumberById('seat-selected', seatSelect);
+
         //------------------Append Child-------------------
         const selectedTicket = document.getElementById('selected-ticket')
         const tr = document.createElement('tr');
@@ -31,20 +34,39 @@ for (const seat of seatNumbers) {
         tr.appendChild(td2);
         tr.appendChild(td3);
         selectedTicket.appendChild(tr, false);
+
         //-------------------Can't selec more than 4---------------
         if (seatSelect > 4) {
             const alertNotice = document.getElementById('alert-notice');
             alertNotice.classList.remove('hidden');
-            const tableHidden = document.getElementById('table-container');  
+            const tableHidden = document.getElementById('table-container');
             tableHidden.classList.add('hidden');
         }
 
         //------------------Show Cupon Field----------------------- 
         const cuponField = document.getElementById('cupon-container');
         cuponField.classList.remove('hidden');
+
         //------------------Total/Grand total Price------------------
         sumOfTicketPrice('total-price', price);
         sumOfTicketPrice('grand-total', price);
+
+        //---------------Next Button-----------
+        const nextButton = document.getElementById('next-btn');
+        const inputNumber = document.getElementById('input-number');
+        inputNumber.addEventListener('input', function () {
+            if (inputNumber.value !== '') {
+                nextButton.disabled = false;
+            }
+        })
+        const headerContainer = document.getElementById('header-container');
+        const mainContainer = document.getElementById('main-container');
+        const successContainer = document.getElementById('success-container');
+        nextButton.addEventListener('click', function () {
+            headerContainer.classList.add('hidden');
+            mainContainer.classList.add('hidden');
+            successContainer.classList.remove('hidden');
+        })
 
     })
 }
@@ -85,11 +107,19 @@ function discountPrice() {
         alert('Invaild Cupon Code');
     }
 }
-//---------------Next Button-----------
-const nextButton = document.getElementById('next-btn');
-const inputNumber = document.getElementById('input-number');
-inputNumber.addEventListener('input', function() {
-if(inputNumber.value !== ''){
-    nextButton.disabled = false;
-}
-})
+// //---------------Next Button-----------
+// const nextButton = document.getElementById('next-btn');
+// const inputNumber = document.getElementById('input-number');
+// inputNumber.addEventListener('input', function() {
+// if(inputNumber.value !== ''){
+//     nextButton.disabled = false;
+// }
+// })
+// const headerContainer = document.getElementById('header-container');
+// const mainContainer = document.getElementById('main-container');
+// const successContainer = document.getElementById('success-container');
+// nextButton.addEventListener('click', function(){
+//     headerContainer.classList.add('hidden');
+//     mainContainer.classList.add('hidden');
+//     successContainer.classList.remove('hidden');
+// })
